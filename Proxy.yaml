@@ -1,0 +1,7 @@
+payload:
+  - DOMAIN-KEYWORD,sydney
+  - DOMAIN,inst-fs-syd-prod.inscloudgate.net
+  - DOMAIN,sentry.insops.net
+  - DOMAIN-KEYWORD,padlet
+  - DOMAIN-SUFFIX,futbin.com
+  - DOMAIN-SUFFIX,futbin.org
