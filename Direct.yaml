@@ -5,9 +5,7 @@ payload:
   - DOMAIN,smtp.office365.com
   - DOMAIN-SUFFIX,mail.icloud.com.cn
   - DOMAIN-SUFFIX,mail.me.com
-  - DOMAIN-SUFFIX,zoom.us
   - DOMAIN-SUFFIX,linksys.com
   - DOMAIN-KEYWORD,outlook
   - DOMAIN-KEYWORD,hotmail
   - DOMAIN-KEYWORD,office365
-  - DOMAIN-KEYWORD,zoom
