@@ -2,3 +2,5 @@ payload:
   - DOMAIN-KEYWORD,brew
   - DOMAIN-KEYWORD,conda
   - DOMAIN-SUFFIX,api.fig.io
+  - DOMAIN-SUFFIX,kaggle.net
+  - DOMAIN-SUFFIX,kaggleusercontent.com
