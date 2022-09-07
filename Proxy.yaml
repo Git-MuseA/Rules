@@ -4,3 +4,5 @@ payload:
   - DOMAIN-SUFFIX,api.fig.io
   - DOMAIN-SUFFIX,kaggle.net
   - DOMAIN-SUFFIX,kaggleusercontent.com
+  - DOMAIN-SUFFIX,edstem.org
+  - DOMAIN-SUFFIX,edcdn.net
