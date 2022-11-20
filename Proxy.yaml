@@ -1,5 +1,6 @@
 payload:
   - DOMAIN-KEYWORD,brew
+  - DOMAIN-KEYWORD,homebrew
   - DOMAIN-KEYWORD,conda
   - DOMAIN-SUFFIX,api.fig.io
   - DOMAIN-SUFFIX,kaggle.net
