@@ -1,13 +1,8 @@
 payload:
-  - DOMAIN-SUFFIX,api.ws-hp.com
-  - DOMAIN-SUFFIX,hpsmart.com
+  - PROCESS-NAME,Microsoft Outlook
   - DOMAIN,imap-mail.outlook.com
   - DOMAIN,smtp-mail.outlook.com
   - DOMAIN,outlook.office365.com
   - DOMAIN,smtp.office365.com
   - DOMAIN-SUFFIX,mail.icloud.com.cn
   - DOMAIN-SUFFIX,mail.me.com
-  - DOMAIN-SUFFIX,linksys.com
-  - DOMAIN-KEYWORD,outlook
-  - DOMAIN-KEYWORD,hotmail
-  - DOMAIN-KEYWORD,office365

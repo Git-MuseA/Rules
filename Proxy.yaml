@@ -1,9 +1,4 @@
 payload:
-  - DOMAIN-KEYWORD,brew
-  - DOMAIN-KEYWORD,homebrew
-  - DOMAIN-KEYWORD,conda
-  - DOMAIN-SUFFIX,api.fig.io
-  - DOMAIN-SUFFIX,kaggle.net
-  - DOMAIN-SUFFIX,kaggleusercontent.com
+  - PROCESS-NAME,curl
   - DOMAIN-SUFFIX,edstem.org
   - DOMAIN-SUFFIX,edcdn.net
