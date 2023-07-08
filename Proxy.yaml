@@ -1,4 +1,3 @@
 payload:
-  - PROCESS-NAME,curl
   - DOMAIN-SUFFIX,edstem.org
   - DOMAIN-SUFFIX,edcdn.net
