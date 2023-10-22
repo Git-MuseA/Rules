@@ -1,8 +1,10 @@
 payload:
   - PROCESS-NAME,Microsoft Outlook
+  - PROCESS-NAME,Mail
   - DOMAIN,imap-mail.outlook.com
   - DOMAIN,smtp-mail.outlook.com
   - DOMAIN,outlook.office365.com
   - DOMAIN,smtp.office365.com
+  - DOMAIN-SUFFIX,m.hotmail.com
   - DOMAIN-SUFFIX,mail.icloud.com.cn
   - DOMAIN-SUFFIX,mail.me.com
