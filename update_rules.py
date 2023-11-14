@@ -1,35 +1,46 @@
-"""Update the rule provider files defined in the 'config.yaml' file.
-
-It downloads the files from the URLs given in the config, saves them to disk, and then generates a 
-new rules file by concatenating the downloaded files with the existing rules file.
-"""
 from pathlib import Path
 
 import requests
 import yaml
+from tqdm import tqdm
 
-# Load the Clash configuration file
-config_file_path = Path("config.yaml")
+HTTP_SUCCESS = 200
 
-with config_file_path.open() as f:
-    config = yaml.safe_load(f)
 
-# Check if `rule_provider` directory exists
-rule_provider_dir = Path.cwd().joinpath("rule_provider")
-if not rule_provider_dir.exists():
-    rule_provider_dir.mkdir()
+def download_file(url: str, path: Path) -> bool:
+    """
+    Download a file from a URL and save it to a specified path.
 
-# Loop through each rule provider
-for provider in config["rule-providers"]:
-    # Get the URL and path for this provider
-    url = config["rule-providers"][provider]["url"]
-    path = rule_provider_dir.joinpath(Path(config["rule-providers"][provider]["path"]).name)
+    Parameters
+    ----------
+    url : str
+        The URL to download the file from.
+    path : Path
+        The Path object representing where to save the file.
 
-    # Download the rule provider file
-    if path.suffix in (".txt", ".yaml"):
-        print(f"Downloading {url} to {path}")
-        r = requests.get(url, timeout=5)
-        with path.open(mode="w") as f:
-            f.write(r.text)
-    else:
-        print(f"Skipping {provider}")
+    Returns
+    -------
+    bool
+        True if the file was downloaded successfully, False otherwise.
+    """
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == HTTP_SUCCESS:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("wb") as file:
+                file.write(response.content)
+            return True
+    except requests.RequestException:
+        return False
+
+
+yaml_file = Path("config.yaml")
+with yaml_file.open("r") as file:
+    data = yaml.safe_load(file)
+
+for _key, value in tqdm(data["rule-providers"].items(), desc="Downloading files"):
+    file_path = Path(value["path"])
+    if not download_file(value["url"], file_path):
+        print(f"{value['url']} failed downloading.")
+
+print("\nDownload completed.")
